@@ -10,8 +10,6 @@ const ErrorPage = () => {
   return (
     <>
       <style>{`
-
-
         .ep-root {
           min-height: 100dvh;
           background: #0b1628;
