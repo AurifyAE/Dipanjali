@@ -12,7 +12,7 @@ import {
 } from "../api/api";
 import io from "socket.io-client";
 import { useSpotRate } from "../context/SpotRateContext";
-import mainLogo from "/images/logo.png";
+import mainLogo from "/images/logo.svg";
 import WorldClockHorizontal from "../components/WorldClock";
 import SystemClock from "../components/SystemClock";
 import PoweredByAurify from "../components/PoweredByAurify";
@@ -125,7 +125,7 @@ function TvScreen() {
         socket.emit("request-data", symbols);
       });
 
-      socket.on("disconnect", () => { });
+      socket.on("disconnect", () => {});
 
       // socket.on("market-data", (data) => {
       //   if (data && data.symbol) {
@@ -232,7 +232,6 @@ function TvScreen() {
             objectFit: "cover",
           }}
         />
-
       </Box>
 
       {/* Grid */}
@@ -251,7 +250,7 @@ function TvScreen() {
         alignItems="center"
         width="100%"
       >
-  <Grid
+        <Grid
           xs={12}
           md={6}
           display="flex"
@@ -264,14 +263,13 @@ function TvScreen() {
           <Box
             sx={{
               height: "auto",
-              width: { xs: "40vw", sm: "20vw" },
+              width: { xs: "40vw", sm: "18vw" },
               marginBottom: { xs: "20px", sm: "0vw" },
             }}
           >
             <img src={mainLogo} alt="" className="object-contain w-full" />
           </Box>
           <CommodityTable items={commodities} />
-
         </Grid>
 
         {/* Side: SpotRate & Date Time */}
@@ -282,7 +280,7 @@ function TvScreen() {
 
           <PoweredByAurify />
         </Grid>
-      
+
         <Grid
           md={12}
           sx={{
