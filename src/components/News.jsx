@@ -10,9 +10,7 @@ const NewsTicker = ({ newsItems = [] }) => {
     <Box
       sx={{
         position: "relative",
-
         width: "100%",
-
         height: {
           xs: "38px",
           lg: "2.7vw",
@@ -48,7 +46,7 @@ const NewsTicker = ({ newsItems = [] }) => {
         sx={{
           color: "#fff",
           background: `linear-gradient(321deg, rgba(79, 37, 17, 0.45), rgb(177 115 89 / 55%), rgba(79, 37, 17, 0.45) 100%)`,
-            fontSize: {
+          fontSize: {
             xs: "12px",
             lg: "1.2vw",
           },
