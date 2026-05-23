@@ -209,7 +209,6 @@ function TvScreen() {
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#000",
-        opacity:'.2'
       }}
     >
       <Box
