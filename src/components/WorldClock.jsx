@@ -20,6 +20,12 @@ const clockConfig = [
     timeZone: "Europe/London",
     flag: "/images/uk.png",
   },
+  {
+  key: "usa",
+  label: "USA",
+  timeZone: "America/New_York",
+  flag: "/images/usa.png",
+},
 ];
 
 const WorldClockHorizontal = () => {
