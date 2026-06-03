@@ -11,17 +11,34 @@ const SystemClock = () => {
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      const dayStr = now
-        .toLocaleDateString("en-GB", { weekday: "long" })
-        .toUpperCase();
+      const DAYS = [
+        "SUNDAY",
+        "MONDAY",
+        "TUESDAY",
+        "WEDNESDAY",
+        "THURSDAY",
+        "FRIDAY",
+        "SATURDAY",
+      ];
 
-      const dateStr = now
-        .toLocaleDateString("en-GB", {
-          day: "2-digit",
-          month: "short",
-          year: "numeric",
-        })
-        .toUpperCase();
+      const dayStr = DAYS[now.getDay()];
+      const MONTHS = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+      ];
+
+      const dateStr = `${String(now.getDate()).padStart(2, "0")} ${MONTHS[now.getMonth()]
+        } ${now.getFullYear()}`;
 
       const timeStr = now.toLocaleTimeString("en-US", {
         hour: "2-digit",
